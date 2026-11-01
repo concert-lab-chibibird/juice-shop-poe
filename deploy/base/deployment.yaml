@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: juice-shop
-          image: docker.io/chibibird/juice-shop-poe:20.3.0-amd64-ocp-test1
+          image: docker.io/chibibird/juice-shop-poe:20.3.0
           imagePullPolicy: Always
 
           ports:
