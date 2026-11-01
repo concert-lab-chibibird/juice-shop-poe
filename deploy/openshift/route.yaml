@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: juice-shop
+  namespace: juice-shop-poe
+  labels:
+    app.kubernetes.io/name: juice-shop
+    app.kubernetes.io/instance: juice-shop-poe
+    app.kubernetes.io/version: "20.3.0"
+    app.kubernetes.io/part-of: concert-poe-reference
+
+spec:
+  to:
+    kind: Service
+    name: juice-shop
+    weight: 100
+
+  port:
+    targetPort: http
+
+  wildcardPolicy: None
